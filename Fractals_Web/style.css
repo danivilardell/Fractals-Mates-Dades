@@ -39,7 +39,7 @@ footer{
 }
 article{
 	font-size:16px;
-	color:#666;
+	color: black;
 	line-height:22px;
 }
 article,
@@ -292,7 +292,8 @@ body{
 	margin:0 0 8px 0;
 }
 .menu a{
-	background: black;
+	border-radius: 4px;
+	background: #4d4d4d;
 	display:inline-block;
 	padding:5px 10px;
 	color:rgba(40,74,87,0.5);
