@@ -4,6 +4,20 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <link href="style.css" rel="stylesheet" type="text/css" media="all"/>
+     <style>
+        code {
+            font-family: monospace;
+            background-color: #f1f1f1;
+            padding: 2px;
+        }
+        pre {
+            margin: 1em 2em;
+            font-family: monospace;
+        }
+        blockquote{
+            border-left: 5px solid #eeeeee;
+        }
+    </style>
 </head>
 <body class="single">
   <div class="wrap">
@@ -18,18 +32,51 @@
     <div class="content">
     	<article>
     		<section class="head">
-				<h3>Fractal geometry is not just a chapter of mathematics, but one that felps Eyeman to see the same world differently</h3>
-				<div class="date">- Benoît Mandelbrot -</div>
-			</section>
-			<section>
-				<h2>Explicar aqui el turtle</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			</section>
-            <section>
-				<h2>Explicar aqui el pas de turtle a PNG</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			</section>
-		</article>
+			<h3>Fractal geometry is not just a chapter of mathematics, but one that felps Eyeman to see the same world differently</h3>
+			<div class="date">- Benoît Mandelbrot -</div>
+		</section>
+		<section>
+			<h2>Turtle: llibreria-gràfica</h2>
+			<p>Per tractar amb la part gràfica dels fractals, utilitzarem la llibreria turtle.</p>
+			<h3>Instruccions-per-instal·lar la llibreria</h3>
+			<ul>
+			    <li>Usuaris MacOS: descarregar i executar l'instal·lador: <a href="https://pythonturtle.org" target="_blank">pythonturtle.org</a>.</li>
+			    <li>
+				Usuaris de Linux:<pre>sudo apt install python3-tk <br />apt install -y python3-wxgtk4.0 <br />python3 -m pip install --user PythonTurtle</pre>
+			    </li>
+			</ul>
+			<blockquote>
+			    <p>⚠️ &emsp;Els usuaris de Windows utilitzant el subsistema Ubuntu hauran d'instal·lar el <a href="https://sourceforge.net/projects/xming/" target="_blank">Xming X Server</a> i afegir la línua <code>export DISPLAY=:0</code> a l'arxiu <code>.bashrc</code></p>
+			</blockquote>
+			<h3>Funcionament de la llibreria</h3>
+			<p>Aquesta llibreria permet generar figures geomètriques utilitzant comandes senzilles com ara:</p>
+			<ul>
+			    <li><code>forward(x)</code>: per avançar x pixels cap a endevant.</li>
+			    <li><code>left(x)</code>/<code>right(x)</code>: per girar x graus a esquerra o dreta.</li>
+			    <li><code>up()</code>/<code>down()</code>: per començar o deixar de pintar per pantalla el moviment.</li>
+			    <li><code>color((r,g,b))</code>: per canviar el color de la traçada.</li>
+			</ul>
+			<p>
+			    Si no sabeu per on començar, podeu trobar exemples senzills a la pàgina
+			    <a href="https://www.geeksforgeeks.org/turtle-programming-python/" target="_blank">GeeksForGeeks.org</a>
+			</p>
+		</section>
+	        <section>
+			<h2>Extra: guarda el resultat en format png</h2>
+			<p>Una vegada finalitzat el dibuix, pot interessar guardar el resultat en forma d'imatge. 
+			Una opció (bastant cutre) és fer una captura de pantalla del resultat. .</p>
+			<p>Per guardar-ho en format png i amb la millor resolució possible cal fer el següent:</p>
+			<ol>
+			    <li>
+				Afegir aquestes línies de codi just abans del <code>turtle.done()</code> per generar un arxiu <code>postscript</code>:
+				<pre>canvas = turtle.getcanvas() <br />canvas.postscript(file="resultat_turtle.ps", colormode='color')
+				</pre>
+			    </li>
+			    <li>Utilitzar un convertidor online com ara <a href="https://convertio.co/es/ps-png/" target="_blank">cloudconvert.com</a> per convertir l'arxiu
+			    <code>.ps</code> en un <code>.png</code>.</li>
+			</ol>
+		</section>
+	</article>
     </div>
     <footer>
 		<nav class="vertical menu">
