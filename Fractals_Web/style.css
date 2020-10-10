@@ -276,12 +276,12 @@ body{
 }
 .logo .title{
 	display:block;
-	font-size:36px;
+	font-size:46px;
 	color:#767676;
-	font-weight: bold;
 }
 .logo .title span{
 	color: black;
+	font-family: 'Monoton', cursive;
 }
 .logo p{
 	font-size:14px;
