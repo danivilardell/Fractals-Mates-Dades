@@ -21,14 +21,13 @@ step = 2
 # turtle config
 turtle.tracer(0, 0)
 turtle.setup(screenx, screeny)
-turtle.bgcolor("#010f7c")
+turtle.bgcolor("white")
 screen = turtle.Screen()
 screen.title("Mandelbrot Fractal (discretization step = %d)" % (int(step)))
 mTurtle = turtle.Turtle()
 mTurtle.penup()
-mTurtle.shape("turtle")
 
-# px * pixelToX = x in en coordenades del pla complexe
+# px * pixelToX = x en coordenades del pla complexe
 pixelToX, pixelToY = (complexPlaneX[1] - complexPlaneX[0])/screenx, (complexPlaneY[1] - complexPlaneY[0])/screeny
 
 # plot

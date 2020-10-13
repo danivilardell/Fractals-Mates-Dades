@@ -17,7 +17,7 @@ def tree(branch, t):
 
 def main():
     t = turtle.Turtle()
-    numBranches = 6 # Podeu canviar el número de branques
+    numBranches = 6 #Podeu canviar el número de branques
     t.left(90)
     t.up()
     t.backward(180)

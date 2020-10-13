@@ -36,7 +36,7 @@ n: el grau de complexitat del fractal
 mida: nomes quan n=0, es la distancia de la linia que dibuixa la tortuga
 """
 def Koch(t, n, mida):
-    if rec > 0:
+    if n > 0:
         Koch(t, n-1, mida/3)
         t.left(60)
         Koch(t, n-1, mida/3)
