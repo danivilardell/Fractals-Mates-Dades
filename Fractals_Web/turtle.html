@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>Llibreria Turtle 🐢</title>
+  <link rel="shortcut icon" href="images/upc-logo.gif">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+
   <link href="style.css" rel="stylesheet" type="text/css" media="all"/>
      <style>
         code {
@@ -32,21 +37,21 @@
     <div class="content">
     	<article>
     		<section class="head">
-			<h3>Fractal geometry is not just a chapter of mathematics, but one that felps Eyeman to see the same world differently</h3>
+			<h3>Fractal geometry is not just a chapter of mathematics, but one that helps Eyeman to see the same world differently</h3>
 			<div class="date">- Benoît Mandelbrot -</div>
 		</section>
 		<section>
 			<h2>Turtle: llibreria-gràfica</h2>
 			<p>Per tractar amb la part gràfica dels fractals, utilitzarem la llibreria turtle.</p>
-			<h3>Instruccions-per-instal·lar la llibreria</h3>
+			<h3>Instal·la la llibreria</h3>
 			<ul>
-			    <li>Usuaris MacOS: descarregar i executar l'instal·lador: <a href="https://pythonturtle.org" target="_blank">pythonturtle.org</a>.</li>
+			    <li>MacOS: Descarregar i executar l'instal·lador: <a href="https://pythonturtle.org" target="_blank">pythonturtle.org</a>.</li>
 			    <li>
-				Usuaris de Linux:<pre>sudo apt install python3-tk <br />apt install -y python3-wxgtk4.0 <br />python3 -m pip install --user PythonTurtle</pre>
+				Linux: Executar els seguents comandaments<pre>sudo apt install python3-tk <br />apt install -y python3-wxgtk4.0 <br />python3 -m pip install --user PythonTurtle</pre>
 			    </li>
 			</ul>
 			<blockquote>
-			    <p>⚠️ &emsp;Els usuaris de Windows utilitzant el subsistema Ubuntu hauran d'instal·lar el <a href="https://sourceforge.net/projects/xming/" target="_blank">Xming X Server</a> i afegir la línua <code>export DISPLAY=:0</code> a l'arxiu <code>.bashrc</code></p>
+			    <p>⚠️ &emsp;Windows utilitzant el subsistema Ubuntu: Instal·lar el <a href="https://sourceforge.net/projects/xming/" target="_blank">Xming X Server</a> i afegir la línia <code>export DISPLAY=:0</code> a l'arxiu <code>.bashrc</code></p>
 			</blockquote>
 			<h3>Funcionament de la llibreria</h3>
 			<p>Aquesta llibreria permet generar figures geomètriques utilitzant comandes senzilles com ara:</p>
@@ -56,14 +61,24 @@
 			    <li><code>up()</code>/<code>down()</code>: per començar o deixar de pintar per pantalla el moviment.</li>
 			    <li><code>color((r,g,b))</code>: per canviar el color de la traçada.</li>
 			</ul>
-			<p>
-			    Si no sabeu per on començar, podeu trobar exemples senzills a la pàgina
-			    <a href="https://www.geeksforgeeks.org/turtle-programming-python/" target="_blank">GeeksForGeeks.org</a>
-			</p>
+			<div style="padding-left: auto; padding-right: auto">
+				<xmp style="border: 2px solid black; width: 450px;">
+  #Exemple de codi de com fer un quadrat
+  import turtle
+  skk = turtle.Turtle()
+
+  for i in range(4):
+      skk.forward(50)
+      skk.right(90)
+
+  turtle.done()
+				</xmp>
+			</div>
+
 		</section>
 	        <section>
 			<h2>Extra: guarda el resultat en format png</h2>
-			<p>Una vegada finalitzat el dibuix, pot interessar guardar el resultat en forma d'imatge. 
+			<p>Una vegada finalitzat el dibuix, pot interessar guardar el resultat en forma d'imatge.
 			Una opció (bastant cutre) és fer una captura de pantalla del resultat. .</p>
 			<p>Per guardar-ho en format png i amb la millor resolució possible cal fer el següent:</p>
 			<ol>
@@ -76,14 +91,40 @@
 			    <code>.ps</code> en un <code>.png</code>.</li>
 			</ol>
 		</section>
+		<section>
+			<h3>Descarrega exemples de fractals amb turtle</h3>
+			<ul>
+				<div class="grid-container">
+	  				<div class="grid-item">
+	  					<a download = "tree.py" href="exemples/tree.py" style="font-size: 25px"> Tree.py </a>
+	  					<div style = "padding: 30px 0;">
+							<img src="images/FractalTree.png" style="width:90px;height:90px; display: block; margin-left: auto; margin-right: auto; width: 80%; height: 70%"/>
+						</div>
+	  				</div>
+	  				<div class="grid-item">
+	  					<a download = "Corba_de_Koch.py" href="exemples/Corba_de_Koch.py" style="font-size: 25px"> Corba_de_Koch.py </a>
+	  					<div style = "padding: 50px 0;">
+							<img src="images/FractalKoch.png" style="width:90px;height:90px; display: block; margin-left: auto; margin-right: auto; width: 80%; height: 70%"/>
+						</div>
+					</div>
+	  				<div class="grid-item">
+	  					<a download = "Mandelbrot.py" href="exemples/Mandelbrot.py" style="font-size: 25px"> Mandelbrot.py </a>
+	  					<div style = "padding: 10px 0;">
+							<img src="images/Mandelbrot.png" style="width:90px;height:90px; display: block; margin-left: auto; margin-right: auto; width: 80%; height: 70%"/>
+						</div>
+					</div>
+				</div>
+			</ul>
+		</section>
+
 	</article>
     </div>
+
     <footer>
 		<nav class="vertical menu">
             <ul>
               <center>
                 <li><a href="index.html">Home page</a></li>
-                <li><a href="rules.html">Contest rules</a></li>
                 <li><a href="https://forms.gle/MwwbHHCpBLtckMnr8">Deliver your Fractal!</a></li>
               </center>
             </ul>
