@@ -5,7 +5,7 @@ def mandelbrot(z , c , n=20):
     if abs(z) > 10 ** 12:
         return float("nan")
     elif n > 0:
-        return mandelbrot(z ** 2 + c, c, n - 1) 
+        return mandelbrot(z ** 2 + c, c, n - 1)
     else:
         return z ** 2 + c
 
@@ -31,8 +31,8 @@ mTurtle.penup()
 pixelToX, pixelToY = (complexPlaneX[1] - complexPlaneX[0])/screenx, (complexPlaneY[1] - complexPlaneY[0])/screeny
 
 # plot
-for px in range(-screenx/2, screenx/2, int(step)):
-    for py in range(-screeny/2, screeny/2, int(step)):
+for px in range(-screenx//2, screenx//2, int(step)):
+    for py in range(-screeny//2, screeny//2, int(step)):
         x, y = px * pixelToX, py * pixelToY
         m =  mandelbrot(0, x + 1j * y)
         if not math.isnan(m.real):
